@@ -5,6 +5,12 @@ import { CommentController } from "./comment.controller";
 const router = express.Router();
 
 
+
+router.get(
+    "/author/:authorId",
+    CommentController.getCommentsByAuthor
+)
+
 router.get(
     "/:commentId",
     CommentController.getCommentById
